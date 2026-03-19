@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PHP</title>
+  <style>
+    
+    header {
+      background: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    h2 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    ul {
+      list-style: none;
+      padding: 10px;
+      columns: 2; /* one-column list */
+    }
+    li {
+      margin: 2px 0;
+    }
+    a {
+      text-decoration: none;
+      color: #004080;
+      font-size: 18px;
+      padding: 8px 12px;
+      display: block;
+      border-radius: 7px;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #004080;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>Lesson Of PHP</header>
+  
+    <h2>Click to learn more:</h2>
+    <ul>
+      <div class="two-column">
+      <li><a href="phpvariable.php">PHP Variables</a></li>
+      <li><a href="">lesson02</a></li>
+      <li><a href="">lesson03</a></li>
+      <li><a href="">lesson04</a></li>
+    </div>
+    </ul>
+  <button  class="btnB"onclick="history.back()">Back</button>
+</body>
+</html>

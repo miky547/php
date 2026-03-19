@@ -1,0 +1,131 @@
+<?php
+$bgGradient = "linear-gradient(135deg,#ff9a9e,#452bd8)";
+$buttonGradient = "linear-gradient(45deg,#ff758c,#452bd8)";
+$inputFocusColor = "#452bd8";
+$resultColor = "#452bd8";
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bill Calculator</title>
+    <style>
+        
+        body{
+            margin:0;
+            font-family: 'Poppins', sans-serif;
+            background: <?php echo $bgGradient; ?>;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+        .card{
+            background: rgba(255,255,255,0.9);
+            padding:40px;
+            width:420px;
+            border-radius:25px;
+            box-shadow:0 20px 50px rgba(0,0,0,0.2);
+            text-align:center;
+        }
+        h1{
+            margin-bottom:25px;
+            color:#333;
+            font-weight:600;
+        }
+        input{
+            width:100%;
+            padding:14px;
+            margin:12px 0;
+            border-radius:12px;
+            border:2px solid transparent;
+            outline:none;
+            font-size:16px;
+            transition:0.3s;
+            background:#f5f5f5;
+        }
+        input:focus{
+            border:2px solid <?php echo $inputFocusColor; ?>;
+            box-shadow:0 0 10px <?php echo $inputFocusColor; ?>;
+            background:white;
+        }
+        button{
+            width:100%;
+            padding:14px;
+            margin-top:15px;
+            border:none;
+            border-radius:12px;
+            background: <?php echo $buttonGradient; ?>;
+            color:white;
+            font-size:16px;
+            font-weight:600;
+            cursor:pointer;
+            transition:0.3s;
+        }
+        button:hover{
+            transform:translateY(-3px);
+            box-shadow:0 10px 20px rgba(0,0,0,0.2);
+        }
+        .result{
+            margin-top:25px;
+            padding:20px;
+            background:#fff;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+        }
+        .result h2{
+            color: <?php echo $resultColor; ?>;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1> Electricity cost Calculator </h1>
+
+    <form method="post">
+        <input type="number" name="previous" placeholder="Previous Number" required>
+        <input type="number" name="new" placeholder="New Number" required>
+        <button type="submit" name="calculate">Calculate</button>
+    </form>
+
+    <?php
+    
+
+if(isset($_POST['calculate'])){
+
+    $previous = $_POST['previous'];
+    $new = $_POST['new'];
+
+    if($new < $previous){
+        echo "<h3 style='color:red'>Error: New number cannot be smaller than Previous number!</h3>";
+    }
+    else{
+
+        $unit = $new - $previous;
+
+        if($unit <= 10){
+            $price = 700;
+        }
+        else if($unit <= 20){
+            $price = 800;
+        }
+        else if($unit <= 30){
+            $price = 900;
+        }
+        else{
+            $price = 1000;
+        }
+        $total = $unit * $price;
+        echo "<h3>Previous: $previous</h3>";
+        echo "<h3>New: $new</h3>";
+        echo "<h3>Used: $unit kW in this month</h3>";
+        echo "<h2 style='color:blue'>Total: $total ៛</h2>";
+    }
+
+}
+
+    ?>
+</div>
+</body>
+</html>

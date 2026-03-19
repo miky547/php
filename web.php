@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-500 text-white">
+
+  <header class="text-center py-10">
+    <h1 class="text-4xl font-bold mb-3">Welcome to my website</h1>
+    <nav class="flex justify-center gap-4 flex-wrap">
+      <a href="LESSON.php" class="border border-white px-6 py-2 rounded-lg hover:bg-white hover:text-blue-500">LESSON</a>
+      <a href="About.php" class="border border-white px-6 py-2 rounded-lg hover:bg-white hover:text-blue-500">ABOUT</a>
+      <a href="SERVICES.php" class="border border-white px-6 py-2 rounded-lg hover:bg-white hover:text-blue-500">SERVICES</a>
+      <a href="test.php" class="border border-white px-6 py-2 rounded-lg hover:bg-white hover:text-blue-500">TEST PHP</a>
+    </nav>
+  </header>
+
+  <section class="flex flex-col items-center justify-center text-center px-5 py-16 space-y-6">
+    <!-- Picture -->
+    <img src="employee.jpg" alt="profile" class="w-64 md:w-80 rounded-xl shadow-lg">
+
+    <!-- Badge text -->
+    <p class="bg-white text-blue-500 px-4 py-1 rounded-full text-sm inline-block">Hi There!</p>
+
+    <!-- Main heading -->
+    <h2 class="text-3xl md:text-4xl font-bold">
+      My Name is Phao Sotheavin<br>
+      A programming
+    </h2>
+
+    <!-- Description -->
+    <p class="text-gray-200 max-w-xl">
+      I design and build modern websites using HTML, PHP, CSS, and Python.
+    </p>
+
+    <!-- Button -->
+    <a href="myinfo.php" class="border border-white px-10 py-2 rounded-lg hover:bg-white hover:text-blue-500 transition">
+      My Info
+    </a>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBU Student Profile & Degrees</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Moul&family=Battambang:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Battambang', sans-serif;
+            background-color: #001eff;
+        }
+
+        .moul-font {
+            font-family: 'Moul', serif;
+            font-weight: normal;
+        }
+
+        /* ១. ផ្នែក Header Background */
+        .header-bg {
+            width: 100%;
+            height: 450px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                              url('https://bbu.edu.kh/img/slider/slider1.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .header-bg h1 {
+            font-size: 30px;
+            margin-bottom: 120px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+        }
+
+        .profile-card {
+            max-width: 600px;
+            margin: -150px auto 40px;
+            background: rgb(255, 255, 255);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(136, 61, 61, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 6px solid #ffffff;
+            margin-top: -110px;
+            object-fit: cover;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .info-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        .info-table td {
+            padding: 15px;
+            border-bottom: 1px solid #1900ff;
+            font-size: 18px;
+        }
+
+        .label { color: #001eff; text-align: left; font-weight: bold; }
+        .value { color: #001eff; text-align: right; }
+
+        .degree-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .degree-card {
+            background: white;
+            padding: 30px 10px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .degree-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(219, 21, 21, 0.1);
+        }
+
+        .degree-card.active {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+        }
+
+        .degree-card img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
+
+        .degree-card.active img {
+            filter: brightness(0) invert(1); 
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header-bg">
+        <h1 class="moul-font">ស្វាគមន៍មកកាន់សាកលវិទ្យាល័យបៀលប្រាយ</h1>
+    </div><div class="profile-card">
+        <img src="face.jpg" alt="Profile" class="avatar">
+        <h2 class="moul-font" style="color: #424cc3; margin-top: 20px;">Student Information</h2>
+        
+        <table class="info-table">
+            <tr><td class="label">នាមត្រកូល នាមខ្លួន:</td><td class="value">ផៅ សុធាវិន</td></tr>
+            <tr><td class="label">Student Name:</td><td class="value">PHAO SOTHEAVIN</td></tr>
+            <tr><td class="label">ភេទ:</td><td class="value">ស្រី</td></tr>
+            <tr><td class="label">ថ្ងៃខែឆ្នាំកំណើត:</td><td class="value">១៩ តុលា ២០០៥</td></tr>
+            <tr><td class="label">ទីកន្លែងកំណើត:</td><td class="value">បន្ទាយមានជ័យ</td></tr>
+            <tr><td class="label">ID Student:</td><td class="value">BMC09379</td></tr>
+            <tr><td class="label">មហាវិទ្យាល័យ:</td><td class="value">វិទ្យាសាស្ត្រ​ និង បច្ចេកវិទ្យា</td></tr>
+            <tr><td class="label">Skills:</td><td class="value">Information Technology</td></tr>
+        </table>
+    </div>
+    
+
+</body>
+<button  class="btnB"onclick="history.back()">Back</button>
+</html>

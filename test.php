@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PHP</title>
+  <style>
+    
+    header {
+      background: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    h2 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    ul {
+      list-style: none;
+      padding: 10px;
+      columns: 2; /* one-column list */
+    }
+    li {
+      margin: 2px 0;
+    }
+    a {
+      text-decoration: none;
+      color: #004080;
+      font-size: 18px;
+      padding: 8px 12px;
+      display: block;
+      border-radius: 7px;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #004080;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>PHP's Test</header>
+  
+    <h2>Click on The Test :</h2>
+    <ul>
+      <div class="two-column">
+      <li><a href="ECC.php">Electricity cost Calculatoin</a></li>
+      <li><a href="phonequess.php">Lucky Quess</a></li>
+      <li><a href="switch-case.php">Student Result</a></li>
+      <li><a href="">Test04</a></li>
+    </div>
+    </ul>
+ 
+</body> 
+</html>
+<button  class="btnB"onclick="history.back()">Back</button>
