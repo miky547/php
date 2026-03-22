@@ -1,3 +1,9 @@
+<?php
+$bgGradient = "linear-gradient(135deg,#ff9a9e,#452bd8)";
+$buttonGradient = "linear-gradient(45deg,#ff758c,#452bd8)";
+$inputFocusColor = "#452bd8";
+$resultColor = "#452bd8";
+?>
 
 <!DOCTYPE html>
 <html>
@@ -73,6 +79,7 @@
     </style>
 </head>
 <body>
+
 <div class="card">
     <h1> Electricity cost Calculator </h1>
 
@@ -80,9 +87,14 @@
         <input type="number" name="previous" placeholder="Previous Number" required>
         <input type="number" name="new" placeholder="New Number" required>
         <button type="submit" name="calculate">Calculate</button>
+         <div class="result-box" id="output"></div>
+</div>
+
     </form>
-    <script>
+    
+<script>
 if(isset($_POST['calculate'])){
+
     $previous = $_POST['previous'];
     $new = $_POST['new'];
 
@@ -106,8 +118,34 @@ if(isset($_POST['calculate'])){
             $price = 1000;
         }
         $total = $unit * $price;
+  
+      document.getElementById("output").innerHTML = `
+        <table>
+            <tr>
+                <th>ព័ត៌មាន</th>
+                <th>លទ្ធផល</th>
+            </tr>
+            <tr>
+                <td>Previous Number</td>
+                <td>${previous}</td>
+            </tr>
+            <tr>
+                <td>New Number</td>
+                <td>${new}</td>
+            </tr>
+            <tr>
+                <td>Unit</td>
+                <td><b>${unit}</b></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>${total} </td>
+            </tr>
+        </table>
+    `;
+  }
 }
-    
+
 </div></script>
 </body>
 </html>
