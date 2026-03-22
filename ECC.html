@@ -79,7 +79,7 @@ $resultColor = "#452bd8";
     </style>
 </head>
 <body>
-
+<?php
 <div class="card">
     <h1> Electricity cost Calculator </h1>
 
@@ -88,7 +88,6 @@ $resultColor = "#452bd8";
         <input type="number" name="new" placeholder="New Number" required>
         <button type="submit" name="calculate">Calculate</button>
     </form>
-<php?
 if(isset($_POST['calculate'])){
     $previous = $_POST['previous'];
     $new = $_POST['new'];
@@ -118,9 +117,8 @@ if(isset($_POST['calculate'])){
         echo "<h3>Used: $unit kW in this month</h3>";
         echo "<h2 style='color:blue'>Total: $total ៛</h2>";
     }
-
-}
 ?>
+}
 </div>
 </body>
 </html>
