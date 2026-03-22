@@ -88,9 +88,8 @@ $resultColor = "#452bd8";
         <input type="number" name="new" placeholder="New Number" required>
         <button type="submit" name="calculate">Calculate</button>
     </form>
-
+<php?
 if(isset($_POST['calculate'])){
-
     $previous = $_POST['previous'];
     $new = $_POST['new'];
 
@@ -121,7 +120,7 @@ if(isset($_POST['calculate'])){
     }
 
 }
-
+?>
 </div>
 </body>
 </html>
